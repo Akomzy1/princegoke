@@ -173,6 +173,22 @@ nav.top a{
   border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s;
 }
 nav.top a:hover{color:var(--band-gold);border-bottom-color:var(--band-gold)}
+/* On a phone the links must all be visible, so they wrap instead of scrolling away. */
+@media(max-width:760px){
+  nav.top .inner{flex-direction:column;align-items:center;gap:.3rem;padding-block:.5rem}
+  nav.top .mark{font-size:.8rem;letter-spacing:.2em}
+  nav.top ul{
+    flex-wrap:wrap;justify-content:center;width:100%;
+    gap:.15rem .95rem;overflow:visible;
+  }
+  nav.top a{font-size:.9rem;letter-spacing:.1em}
+}
+@media(max-width:400px){
+  nav.top .mark{display:none}
+  nav.top a{font-size:.86rem;letter-spacing:.06em}
+}
+/* keep anchor targets clear of the sticky bar */
+#record,#evidence,#recognition,#vision,#commitment{scroll-margin-top:6.5rem}
 
 /* ============================ HERO ============================ */
 .hero{padding-block:clamp(3rem,6vw,5.2rem)}
