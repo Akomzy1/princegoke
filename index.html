@@ -435,6 +435,42 @@ footer .fin{font-family:var(--inscr);letter-spacing:.2em;text-transform:uppercas
   html{scroll-behavior:auto}
 }
 html{scroll-behavior:smooth}
+
+/* ============================ PRINT ============================ */
+.print-poster{display:none}
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important;animation:none!important}
+  html{scroll-behavior:auto}
+  body{background:var(--ground)}
+  nav.top,.crest,video{display:none!important}
+  .print-poster{display:block;width:100%;height:auto}
+  a[href^="#"]{text-decoration:none;color:inherit}
+  .band{background:var(--band)!important;color:var(--band-ink)!important}
+  section{padding-block:1.6rem}
+  .hero{padding-block:1.2rem}
+  .strip{grid-template-columns:repeat(4,1fr)}
+  /* A Letter/A4 page is ~816px wide, just under these desktop breakpoints —
+     force the intended two-column layouts rather than let them stack. */
+  .hero-grid{grid-template-columns:1.08fr .92fr!important}
+  .two,.vm{grid-template-columns:1fr 1fr!important}
+  .pillar{grid-template-columns:minmax(0,.34fr) minmax(0,.66fr)!important}
+  /* Same fix as above: these also silently lost their two-column layout at
+     print width, so a tall (9:16) photo rendered at FULL page width — well
+     over one page tall — and the page break sliced straight through it.
+     Forcing the column split keeps every photo within a single page. */
+  .ev.wide{grid-template-columns:1.3fr .7fr!important}
+  .ev.pair{grid-template-columns:1fr 1fr!important}
+
+  /* Page breaks: protect only the small, self-contained units — a single
+     photo, a single plaque, a single bullet, a caption block — so those
+     never get sliced in half. Do NOT protect whole cards or sections (a
+     .commit, a .pillar, the entire evidence block): those are taller than
+     a page, so "keep together" just shoves the whole thing onto a fresh
+     page and leaves the one before it mostly empty. Left to flow, the
+     content below fills that space instead. */
+  .plate,.frame,.strip figure,.plaque,.cap,.callout,
+  .deeds li,.pillar ol li,.ledger .row{break-inside:avoid}
+}
 </style>
 <style>
   html{color-scheme:light dark}
@@ -618,6 +654,7 @@ html{scroll-behavior:smooth}
       <div class="ev pair">
         <div class="plate tall">
           <video controls preload="metadata" playsinline poster="assets/poster_library.jpg" src="assets/library.mp4"></video>
+          <img class="print-poster" src="assets/poster_library.jpg" alt="A library desk inscribed: Presented by Prince (Dr) Adegoke Akinola-Adefolalu 2025.">
         </div>
         <div class="cap">
           <div class="no">Evidence I &middot; Film</div>
@@ -631,6 +668,7 @@ html{scroll-behavior:smooth}
         <div class="plate tall"><img src="assets/jersey_still.jpg" alt="A red sports jersey printed with the words Ilawe Grammar School, Ilawe Ekiti."></div>
         <div class="plate tall">
           <video controls preload="metadata" playsinline poster="assets/poster_jersey.jpg" src="assets/jersey.mp4"></video>
+          <img class="print-poster" src="assets/poster_jersey.jpg" alt="A still frame from the jersey donation film.">
         </div>
       </div>
       <div class="cap">
