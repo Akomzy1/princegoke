@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The community service record and the vision and mission of Prince Dr. Jerome Adegoke Akinola for the Stool of Alawe of Ilawe-Ekiti.">
+<meta name="theme-color" content="#111a30">
+<meta property="og:title" content="Build Ilawe Together">
+<meta property="og:description" content="A record of service to Ilawe-Ekiti, and a vision for the town's next chapter.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%91%3C/text%3E%3C/svg%3E">
+<title>Build Ilawe Together</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Marcellus+SC&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+
+<style>
+/* ============================ TOKENS ============================ */
+:root{
+  --ground:#f7f2e6;
+  --ground-2:#efe7d4;
+  --ink:#161f38;
+  --ink-2:#4c5468;
+  --ink-3:#756d5c;
+  --rule:rgba(22,31,56,.15);
+  --hair:rgba(22,31,56,.09);
+  --coral:#8e2a22;
+  --gold:#8c6a1d;
+  --gold-line:#b99a55;
+  --panel:#fffdf6;
+  --shadow:rgba(38,28,8,.13);
+
+  /* the royal band — deep in every theme */
+  --band:#111a30;
+  --band-2:#182642;
+  --band-ink:#f5efe2;
+  --band-ink-2:#b6b0a0;
+  --band-gold:#d2b271;
+  --band-gold-2:#8f7434;
+  --band-coral:#c4584a;
+
+  --display:"Bodoni Moda","Didot","Bodoni MT",Georgia,"Times New Roman",serif;
+  --inscr:"Marcellus SC",Optima,"Palatino Linotype",Palatino,Georgia,serif;
+  --body:"Spectral",Georgia,"Iowan Old Style","Times New Roman",serif;
+
+  --shell:1180px;
+  --measure:60ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0d1423;
+    --ground-2:#131c2e;
+    --ink:#f2ecdf;
+    --ink-2:#a8afc0;
+    --ink-3:#9c9483;
+    --rule:rgba(242,236,223,.17);
+    --hair:rgba(242,236,223,.09);
+    --coral:#d1685a;
+    --gold:#cda85f;
+    --gold-line:#8a6f36;
+    --panel:#151e31;
+    --shadow:rgba(0,0,0,.55);
+    --band:#080e1b;
+    --band-2:#101a2e;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0d1423;
+  --ground-2:#131c2e;
+  --ink:#f2ecdf;
+  --ink-2:#a8afc0;
+  --ink-3:#9c9483;
+  --rule:rgba(242,236,223,.17);
+  --hair:rgba(242,236,223,.09);
+  --coral:#d1685a;
+  --gold:#cda85f;
+  --gold-line:#8a6f36;
+  --panel:#151e31;
+  --shadow:rgba(0,0,0,.55);
+  --band:#080e1b;
+  --band-2:#101a2e;
+}
+
+/* ============================ BASE ============================ */
+*{box-sizing:border-box}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--body);
+  font-weight:400;
+  font-size:clamp(1.3rem,1.18rem + .58vw,1.56rem);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+a{color:inherit}
+img,video{display:block;max-width:100%}
+:focus-visible{outline:2.5px solid var(--coral);outline-offset:3px;border-radius:2px}
+
+.shell{width:min(100% - 2.6rem,var(--shell));margin-inline:auto}
+.measure{max-width:var(--measure)}
+
+.eyebrow{
+  font-family:var(--inscr);
+  font-size:clamp(.92rem,.85rem + .26vw,1.09rem);
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 1.1rem;
+  padding-left:.3em;
+}
+.band .eyebrow{color:var(--band-gold)}
+
+/* beadwork divider — Yoruba coral-and-gold bead motif */
+.bead{
+  height:10px;width:100%;
+  background:
+    radial-gradient(circle at 5px 50%,  var(--gold-line) 0 2.7px, transparent 3.1px) 0 0/18px 100%,
+    radial-gradient(circle at 14px 50%, var(--coral)     0 1.9px, transparent 2.3px) 0 0/18px 100%;
+  opacity:.85;
+}
+.band .bead{
+  background:
+    radial-gradient(circle at 5px 50%,  var(--band-gold)  0 2.7px, transparent 3.1px) 0 0/18px 100%,
+    radial-gradient(circle at 14px 50%, var(--band-coral) 0 1.9px, transparent 2.3px) 0 0/18px 100%;
+}
+
+section{padding-block:clamp(3.6rem,7vw,6.4rem)}
+.band{
+  background:var(--band);
+  color:var(--band-ink);
+  position:relative;
+}
+.band::before,.band::after{
+  content:"";position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--band-gold-2) 22%,var(--band-gold-2) 78%,transparent);
+}
+.band::before{top:0}
+.band::after{bottom:0}
+.band h2,.band h3{color:var(--band-gold)}
+.band p{color:var(--band-ink)}
+.band .muted{color:var(--band-ink-2)}
+.muted{color:var(--ink-2)}
+
+.h2{font-size:clamp(2.42rem,1.72rem + 2.85vw,3.75rem);letter-spacing:-.005em}
+.lede{font-size:clamp(1.5rem,1.3rem + .95vw,2.02rem);line-height:1.54;font-weight:300}
+.stack{display:flex;flex-direction:column;gap:1.15rem}
+.head-block{display:flex;flex-direction:column;gap:1.4rem;margin-bottom:clamp(2.2rem,4vw,3.2rem)}
+.head-block .bead{max-width:190px}
+
+/* ============================ NAV ============================ */
+nav.top{
+  position:sticky;top:0;z-index:60;
+  background:var(--band);
+  border-bottom:1px solid var(--band-gold-2);
+}
+nav.top .inner{
+  display:flex;align-items:center;justify-content:space-between;gap:1.4rem;
+  padding-block:.62rem;
+}
+nav.top .mark{
+  font-family:var(--inscr);font-size:.95rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--band-gold);white-space:nowrap;
+}
+nav.top ul{display:flex;gap:clamp(.85rem,2vw,1.9rem);list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+nav.top ul::-webkit-scrollbar{display:none}
+nav.top a{
+  font-family:var(--inscr);font-size:.97rem;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--band-ink-2);text-decoration:none;white-space:nowrap;padding-block:.3rem;
+  border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s;
+}
+nav.top a:hover{color:var(--band-gold);border-bottom-color:var(--band-gold)}
+
+/* ============================ HERO ============================ */
+.hero{padding-block:clamp(3rem,6vw,5.2rem)}
+.hero-grid{
+  display:grid;gap:clamp(2.4rem,5vw,4.4rem);
+  grid-template-columns:1fr;align-items:center;
+}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.08fr .92fr}}
+.crest{
+  font-family:var(--inscr);font-size:.96rem;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--band-ink-2);display:flex;align-items:center;gap:.85rem;margin-bottom:1.6rem;
+}
+.crest::after{content:"";flex:1;height:1px;background:var(--band-gold-2);max-width:120px}
+.hero .rank{
+  font-family:var(--inscr);
+  font-size:clamp(1.14rem,.98rem + .64vw,1.48rem);
+  letter-spacing:.26em;text-transform:uppercase;color:var(--band-gold);
+  padding-left:.26em;margin-bottom:.7rem;
+}
+.hero h1{
+  font-family:var(--display);
+  font-size:clamp(2.7rem,1.4rem + 6.4vw,5.3rem);
+  font-weight:700;line-height:.98;letter-spacing:-.015em;
+  color:var(--band-ink);
+}
+.hero h1 .given{display:block;font-weight:400;font-style:italic;font-size:.52em;letter-spacing:.005em;color:var(--band-ink);opacity:.93;margin-bottom:.12em}
+.hero h1 .sur{display:block;color:var(--band-gold)}
+.post{
+  font-family:var(--inscr);font-size:clamp(1rem,.9rem + .44vw,1.24rem);
+  letter-spacing:.2em;color:var(--band-ink-2);margin-top:1.15rem;padding-left:.2em;
+}
+.hero .thesis{
+  font-size:clamp(1.44rem,1.26rem + .9vw,1.88rem);line-height:1.5;font-weight:300;
+  color:var(--band-ink);margin-top:1.7rem;max-width:34ch;
+}
+.hero .role{
+  font-family:var(--inscr);font-size:1.05rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--band-coral);margin-top:1.6rem;
+}
+/* gold-ruled portrait frame */
+.frame{position:relative;padding:12px}
+.frame::before{
+  content:"";position:absolute;inset:0;
+  border:1px solid var(--band-gold-2);
+}
+.frame::after{
+  content:"";position:absolute;inset:12px;
+  border:1px solid var(--band-gold);opacity:.55;pointer-events:none;z-index:2;
+}
+.frame img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 18%}
+
+/* ============================ LEDGER ============================ */
+.ledger{display:grid;gap:0;border-top:1px solid var(--band-gold-2)}
+.ledger .row{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(1.1rem,3vw,2.6rem);
+  align-items:baseline;padding-block:clamp(1.1rem,2.4vw,1.6rem);
+  border-bottom:1px solid var(--band-gold-2);
+}
+.ledger .fig{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(2.5rem,1.6rem + 3.6vw,4.4rem);line-height:.9;
+  color:var(--band-gold);font-variant-numeric:tabular-nums;
+  min-width:3.5ch;
+}
+.ledger .fig .unit{font-size:.3em;font-family:var(--inscr);letter-spacing:.14em;vertical-align:.6em;margin-left:.08em;color:var(--band-ink-2)}
+.ledger .what{display:flex;flex-direction:column;gap:.4rem}
+.ledger .what b{
+  font-family:var(--inscr);font-weight:400;font-size:clamp(1.06rem,.96rem + .44vw,1.3rem);
+  letter-spacing:.15em;text-transform:uppercase;color:var(--band-ink);
+}
+.ledger .what span{color:var(--band-ink-2);font-size:1.32rem;line-height:1.6;max-width:56ch}
+
+/* ============================ COMMITMENT COLUMNS ============================ */
+.two{display:grid;gap:clamp(2.4rem,5vw,4rem);grid-template-columns:1fr}
+@media(min-width:820px){.two{grid-template-columns:1fr 1fr}}
+.commit h3{
+  font-family:var(--display);font-size:clamp(1.72rem,1.38rem + 1.25vw,2.28rem);
+  color:var(--ink);margin-bottom:.4rem;
+}
+.commit .roman{
+  font-family:var(--inscr);font-size:1rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--coral);margin-bottom:.9rem;
+}
+.deeds{list-style:none;margin:1.6rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.35rem}
+.deeds li{border-top:1px solid var(--hair);padding-top:1.15rem}
+.deeds b{
+  display:block;font-family:var(--display);font-weight:600;
+  font-size:1.52rem;line-height:1.26;color:var(--ink);margin-bottom:.38rem;
+}
+.deeds .when{
+  font-family:var(--inscr);font-size:.96rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.42rem;
+}
+.deeds p{color:var(--ink-2);font-size:1.34rem;line-height:1.62}
+
+/* ============================ EVIDENCE ============================ */
+.evidence{display:grid;gap:clamp(2.6rem,5vw,4.2rem)}
+.ev{display:grid;gap:clamp(1.3rem,3vw,2.2rem);align-items:start}
+@media(min-width:760px){
+  .ev.wide{grid-template-columns:1.3fr .7fr}
+  .ev.pair{grid-template-columns:1fr 1fr}
+}
+.plate{
+  position:relative;background:var(--panel);
+  padding:10px;border:1px solid var(--rule);
+  box-shadow:0 14px 34px -22px var(--shadow);
+}
+.plate img,.plate video{width:100%;height:auto;background:var(--band)}
+.plate.tall img,.plate.tall video{aspect-ratio:9/16;object-fit:cover}
+.plate.land img{aspect-ratio:4/3;object-fit:cover}
+.cap{display:flex;flex-direction:column;gap:.55rem;padding-top:.2rem}
+.cap .no{
+  font-family:var(--inscr);font-size:.96rem;letter-spacing:.26em;text-transform:uppercase;color:var(--coral);
+}
+.cap h3{font-family:var(--display);font-size:clamp(1.62rem,1.4rem + 1.05vw,2.18rem);color:var(--ink);line-height:1.22}
+.cap p{color:var(--ink-2);font-size:1.34rem;line-height:1.62;max-width:44ch}
+.cap .stamp{
+  font-family:var(--inscr);font-size:.95rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);border-top:1px solid var(--hair);padding-top:.6rem;margin-top:.25rem;
+  line-height:1.7;
+}
+.duo{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+
+/* ============================ PLAQUES ============================ */
+.plaques{display:grid;gap:1.4rem;grid-template-columns:1fr}
+@media(min-width:760px){.plaques{grid-template-columns:repeat(3,1fr)}}
+.plaque{
+  background:var(--ground-2);
+  border:1px solid var(--rule);
+  border-top:3px solid var(--gold-line);
+  padding:1.55rem 1.5rem 1.7rem;
+  display:flex;flex-direction:column;gap:.7rem;
+}
+.plaque .date{
+  font-family:var(--inscr);font-size:.96rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);
+  font-variant-numeric:tabular-nums;
+}
+.plaque h3{font-family:var(--display);font-size:1.58rem;line-height:1.28;color:var(--ink)}
+.plaque p{color:var(--ink-2);font-size:1.3rem;line-height:1.6}
+
+/* ============================ PORTRAIT STRIP ============================ */
+.strip{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:700px){.strip{grid-template-columns:repeat(4,1fr)}}
+.strip figure{margin:0}
+.strip img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;
+  border:1px solid var(--rule);
+}
+
+/* ============================ OATH ============================ */
+.oath{text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.6rem}
+.oath blockquote{
+  margin:0;font-family:var(--display);font-style:italic;font-weight:400;
+  font-size:clamp(1.5rem,1rem + 2.7vw,2.85rem);line-height:1.32;
+  color:var(--band-ink);max-width:22ch;
+}
+.oath .attrib{
+  font-family:var(--inscr);font-size:1.01rem;letter-spacing:.26em;text-transform:uppercase;color:var(--band-gold);
+}
+.oath .bead{max-width:160px}
+
+/* ============================ VISION ============================ */
+.vm{display:grid;gap:clamp(2rem,4vw,3.2rem);grid-template-columns:1fr}
+@media(min-width:840px){.vm{grid-template-columns:1fr 1fr}}
+.vm article{
+  border-top:3px solid var(--coral);padding-top:1.5rem;
+  display:flex;flex-direction:column;gap:.9rem;
+}
+.vm h3{font-family:var(--inscr);font-size:1.08rem;letter-spacing:.3em;text-transform:uppercase;color:var(--coral)}
+.vm p{font-size:clamp(1.36rem,1.22rem + .62vw,1.64rem);line-height:1.62;color:var(--ink)}
+
+.pillars{display:flex;flex-direction:column;gap:clamp(2.6rem,5vw,4rem)}
+.pillar{
+  display:grid;gap:clamp(.9rem,2.6vw,2.6rem);
+  grid-template-columns:1fr;
+  border-top:1px solid var(--rule);padding-top:clamp(1.4rem,2.6vw,2rem);
+}
+@media(min-width:880px){.pillar{grid-template-columns:minmax(0,.34fr) minmax(0,.66fr)}}
+.pillar .num{
+  font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums;
+  font-size:clamp(1.9rem,1.4rem + 1.9vw,2.9rem);line-height:1;color:var(--gold-line);
+  margin-bottom:.55rem;
+}
+.pillar h3{
+  font-family:var(--display);font-size:clamp(1.72rem,1.45rem + 1.2vw,2.4rem);
+  line-height:1.2;color:var(--ink);
+}
+.pillar .intro{color:var(--ink-2);font-size:1.34rem;line-height:1.62;margin-top:.85rem;max-width:44ch}
+.pillar ol{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-direction:column;gap:.85rem;counter-reset:sub;
+}
+.pillar ol li{
+  position:relative;padding-left:2.6rem;color:var(--ink);
+  font-size:1.34rem;line-height:1.62;
+}
+.pillar ol li::before{
+  counter-increment:sub;content:counter(sub,lower-alpha) ".";
+  position:absolute;left:0;top:0;
+  font-family:var(--inscr);font-size:.95rem;color:var(--coral);letter-spacing:.05em;
+}
+.callout{
+  margin-top:1.4rem;background:var(--ground-2);
+  border-left:3px solid var(--gold-line);
+  padding:1.25rem 1.4rem;display:flex;flex-direction:column;gap:.7rem;
+}
+.callout .tag{
+  font-family:var(--inscr);font-size:.94rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+}
+.callout p{font-size:1.32rem;line-height:1.62;color:var(--ink-2)}
+.callout strong{color:var(--ink);font-weight:600}
+
+/* ============================ CLOSING / FOOTER ============================ */
+.closing{text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.closing .rank{font-family:var(--inscr);font-size:1.06rem;letter-spacing:.3em;text-transform:uppercase;color:var(--band-gold)}
+.closing h2{font-size:clamp(1.9rem,1.2rem + 3.4vw,3.4rem);color:var(--band-ink);font-weight:700}
+.closing .vow{
+  font-family:var(--display);font-style:italic;font-size:clamp(1.15rem,1rem + .8vw,1.6rem);
+  color:var(--band-gold);max-width:30ch;line-height:1.45;
+}
+.pledge{
+  display:flex;flex-wrap:wrap;gap:.55rem 1.6rem;justify-content:center;
+  font-family:var(--inscr);font-size:1rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--band-ink-2);max-width:60ch;
+}
+.prof{display:grid;gap:1.4rem;grid-template-columns:1fr}
+@media(min-width:760px){.prof{grid-template-columns:repeat(3,1fr)}}
+.prof .r{border-left:3px solid var(--gold-line);padding-left:1.15rem}
+.prof .r b{display:block;font-family:var(--display);font-weight:600;font-size:1.58rem;color:var(--ink)}
+.prof .r span{color:var(--ink-2);font-size:1.3rem}
+footer{border-top:1px solid var(--rule);padding-block:2.8rem;color:var(--ink-3);font-size:1.22rem}
+footer .fin{font-family:var(--inscr);letter-spacing:.2em;text-transform:uppercase;font-size:.97rem}
+
+/* ============================ MOTION ============================ */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero .anim{animation:rise .78s cubic-bezier(.16,1,.3,1) backwards}
+.hero .d1{animation-delay:.05s}
+.hero .d2{animation-delay:.16s}
+.hero .d3{animation-delay:.27s}
+.hero .d4{animation-delay:.38s}
+.hero .d5{animation-delay:.5s}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+html{scroll-behavior:smooth}
+</style>
+<style>
+  html{color-scheme:light dark}
+  body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="shell inner">
+    <div class="mark">Ilawe&#8209;Ekiti &middot; Ekiti State</div>
+    <ul>
+      <li><a href="#record">The Record</a></li>
+      <li><a href="#evidence">Evidence</a></li>
+      <li><a href="#recognition">Recognition</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#commitment">Commitment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<section class="band hero">
+  <div class="shell hero-grid">
+    <div>
+      <div class="crest anim d1">Aspirant to the Stool of Alawe</div>
+      <div class="rank anim d2">Prince Dr.</div>
+      <h1 class="anim d2">
+        <span class="given">Jerome Adegoke</span>
+        <span class="sur">AKINOLA</span>
+      </h1>
+      <div class="post anim d3">FCA &middot; FCTI &middot; FCILRMN &middot; MJF &middot; NLCF</div>
+      <p class="thesis anim d4">Years of service to Ilawe&#8209;Ekiti &mdash; and a vision for the town&rsquo;s next chapter.</p>
+      <div class="role anim d5">Finance Executive &middot; Chartered Accountant &middot; Philanthropist</div>
+    </div>
+    <div class="frame anim d3">
+      <img src="assets/hero.jpg" alt="Portrait of Prince Dr. Jerome Adegoke Akinola in white aso-oke agbada and a red-and-black embroidered fila.">
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LEDE ============================ -->
+<section>
+  <div class="shell">
+    <div class="head-block">
+      <div class="bead"></div>
+      <p class="eyebrow">A Son of Ilawe</p>
+    </div>
+    <div class="stack measure">
+      <p class="lede">A chartered accountant and Doctor of Business Administration with over three decades of leadership in financial management and corporate governance &mdash; from Mathematics graduate and classroom teacher to Audit Manager, Group Executive Director and Chairman.</p>
+      <p>What follows is not a list of promises. It is first a record &mdash; twenty&#8209;two unbroken years of awards, scholarships, jobs, jerseys, desks and boreholes in Ilawe&#8209;Ekiti &mdash; and then a plan for what that record makes possible from the Stool of Alawe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LEDGER ============================ -->
+<section class="band" id="record">
+  <div class="shell">
+    <div class="head-block">
+      <div class="bead"></div>
+      <p class="eyebrow">The Record, In Figures</p>
+      <h2 class="h2">Kept Books</h2>
+    </div>
+    <div class="ledger">
+      <div class="row">
+        <div class="fig">22<span class="unit">yrs</span></div>
+        <div class="what">
+          <b>The Adegoke Akinola Awards</b>
+          <span>Honouring outstanding secondary school students in Ilawe&#8209;Ekiti without interruption since 2004.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="fig">40</div>
+        <div class="what">
+          <b>Youths placed in employment</b>
+          <span>Jobs facilitated for young people of Ilawe&#8209;Ekiti from 2000 to the present day.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="fig">14</div>
+        <div class="what">
+          <b>Students returned to the examination hall</b>
+          <span>As a classroom teacher, he brought Ilawe youths to his own school to repeat the final year, resit the West African School Certificate, and go on to higher institutions.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="fig">2011</div>
+        <div class="what">
+          <b>Adegoke Akinola&#8209;Adefolalu House</b>
+          <span>Named in his honour at Ilawe Grammar School, where he serves as patron &mdash; 14 November 2011.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TWO COMMITMENTS ============================ -->
+<section>
+  <div class="shell">
+    <div class="head-block">
+      <div class="bead"></div>
+      <p class="eyebrow">Two Standing Commitments</p>
+      <h2 class="h2">What has already been done</h2>
+    </div>
+    <div class="two">
+      <div class="commit">
+        <div class="roman">Commitment I</div>
+        <h3>Giving Back to Ilawe&#8209;Ekiti</h3>
+        <p class="muted">Two decades of sustained support for students, corps members and schools in his hometown.</p>
+        <ul class="deeds">
+          <li>
+            <div class="when">2004 &ndash; Present</div>
+            <b>Annual Adegoke Akinola Awards</b>
+            <p>Established and sustained awards for outstanding secondary school students in Ilawe&#8209;Ekiti.</p>
+          </li>
+          <li>
+            <div class="when">2008 &ndash; Present</div>
+            <b>NYSC Welfare</b>
+            <p>Accommodation and essential welfare support for Corps members serving in Ilawe&#8209;Ekiti.</p>
+          </li>
+          <li>
+            <b>Full Scholarships</b>
+            <p>Awarded to indigent secondary school students, enabling access to quality education.</p>
+          </li>
+          <li>
+            <b>Sports Development</b>
+            <p>Equipment donated to primary and secondary schools to promote youth development and sporting excellence.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="commit">
+        <div class="roman">Commitment II</div>
+        <h3>Empowering People &amp; Families</h3>
+        <p class="muted">Direct support for the people of Ilawe&#8209;Ekiti &mdash; in employment, education and times of need.</p>
+        <ul class="deeds">
+          <li>
+            <div class="when">2000 &ndash; Present</div>
+            <b>Employment Opportunities</b>
+            <p>Jobs facilitated for about forty youths from Ilawe&#8209;Ekiti, supporting career growth and economic empowerment.</p>
+          </li>
+          <li>
+            <b>Accommodation &amp; Welfare</b>
+            <p>Assistance for Ilawe&#8209;Ekiti youths living in Lagos and Ekiti States.</p>
+          </li>
+          <li>
+            <b>Higher Education Sponsorship</b>
+            <p>Sponsored and supported Ilawe&#8209;Ekiti students in universities and polytechnics.</p>
+          </li>
+          <li>
+            <b>Support for Vulnerable Households</b>
+            <p>Financial assistance extended to vulnerable households and families within the community.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EVIDENCE ============================ -->
+<section style="background:var(--ground-2)" id="evidence">
+  <div class="shell">
+    <div class="head-block">
+      <div class="bead"></div>
+      <p class="eyebrow">The Record, In Evidence</p>
+      <h2 class="h2">Delivered, and photographed</h2>
+    </div>
+
+    <div class="evidence">
+
+      <div class="ev wide">
+        <div class="plate land"><img src="assets/library_still.jpg" alt="A school library at Ilawe Grammar School furnished with new wooden reading desks and benches, with filled bookshelves along the back wall."></div>
+        <div class="cap">
+          <div class="no">Evidence I</div>
+          <h3>A library, furnished</h3>
+          <p>Donated school library furniture to Ilawe Grammar School &mdash; reading desks and benches built and installed so that a room of books became a room that can be worked in.</p>
+          <div class="stamp">Ilawe Grammar School &middot; Ilawe&#8209;Ekiti</div>
+        </div>
+      </div>
+
+      <div class="ev pair">
+        <div class="plate tall">
+          <video controls preload="metadata" playsinline poster="assets/poster_library.jpg" src="assets/library.mp4"></video>
+        </div>
+        <div class="cap">
+          <div class="no">Evidence I &middot; Film</div>
+          <h3>Walking the reading room</h3>
+          <p>A walk&#8209;through of the furnished library, recorded on the day of the handover.</p>
+          <div class="stamp">Running time 1:02</div>
+        </div>
+      </div>
+
+      <div class="ev pair">
+        <div class="plate tall"><img src="assets/jersey_still.jpg" alt="A red sports jersey printed with the words Ilawe Grammar School, Ilawe Ekiti."></div>
+        <div class="plate tall">
+          <video controls preload="metadata" playsinline poster="assets/poster_jersey.jpg" src="assets/jersey.mp4"></video>
+        </div>
+      </div>
+      <div class="cap">
+        <div class="no">Evidence II</div>
+        <h3>Sports jerseys, named for the school</h3>
+        <p>A donation of playing kit to Ilawe Grammar School &mdash; each jersey printed with the school&rsquo;s own name, so a team takes the field as itself.</p>
+        <div class="stamp">Ilawe Grammar School &middot; Ilawe&#8209;Ekiti</div>
+      </div>
+
+      <div class="ev wide">
+        <div class="plate land"><img src="assets/trophies_wide.jpg" alt="Eleven gold trophies with red, white and blue ribbons arranged on a table, each on a black plinth with an engraved plaque."></div>
+        <div class="cap">
+          <div class="no">Evidence III</div>
+          <h3>Sports equipment for every school</h3>
+          <p>Sports equipment donated to the secondary schools of Ilawe&#8209;Ekiti. Each plinth is engraved with its destination &mdash; not a single gift, but a set, distributed across the town.</p>
+          <div class="stamp">Ilawe Grammar School &middot; United High School &middot; Corpus Christi College &middot; St.&nbsp;Mary&rsquo;s Catholic Primary &middot; St.&nbsp;Michael&rsquo;s Catholic Primary</div>
+        </div>
+      </div>
+
+      <div class="ev pair">
+        <div class="plate tall"><img src="assets/trophies_tall.jpg" alt="Three of the gold trophies photographed closely, the front plaque reading: Donated by Prince Adegoke Akinola-Adefolalu to Ilawe Grammar School, Ilawe-Ekiti."></div>
+        <div class="cap">
+          <div class="no">Evidence III &middot; Detail</div>
+          <h3>The engraving</h3>
+          <p>&ldquo;Donated by Prince Adegoke Akinola&#8209;Adefolalu to Ilawe Grammar School, Ilawe&#8209;Ekiti.&rdquo; The same plate, cut again for each school on the list.</p>
+          <div class="stamp">Engraved plinth &middot; Detail</div>
+        </div>
+      </div>
+
+      <div class="ev pair">
+        <div class="plate tall"><img src="assets/maths.jpg" alt="Prince Dr. Akinola addressing pupils in a school courtyard, holding an envelope, with two students in uniform standing beside him."></div>
+        <div class="cap">
+          <div class="no">Evidence IV</div>
+          <h3>The Mathematics prize</h3>
+          <p>Presenting a monetary gift to the best Mathematics student from JSS&nbsp;1 to SS&nbsp;2 at Ilawe Grammar School &mdash; the same prize, given every year since 2004.</p>
+          <div class="stamp">Ilawe Grammar School &middot; 2025</div>
+        </div>
+      </div>
+
+      <div class="ev pair">
+        <div class="plate"><img src="assets/nysc_a.jpg" alt="Prince Dr. Akinola in white, standing with four Youth Corps members outside the accommodation he provides for them."></div>
+        <div class="plate"><img src="assets/nysc_b.jpg" alt="Prince Dr. Akinola standing with five Youth Corps members on the paved forecourt of the accommodation building."></div>
+      </div>
+      <div class="cap">
+        <div class="no">Evidence V</div>
+        <h3>A roof for the corps members</h3>
+        <p>Youth Corps members posted to Ilawe&#8209;Ekiti, photographed at the accommodation he provides them free of charge &mdash; welfare support he has sustained since 2008.</p>
+        <div class="stamp">NYSC Welfare &middot; Ilawe&#8209;Ekiti &middot; 2008 &ndash; Present</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RECOGNITION ============================ -->
+<section id="recognition">
+  <div class="shell">
+    <div class="head-block">
+      <div class="bead"></div>
+      <p class="eyebrow">Recognition</p>
+      <h2 class="h2">On the record, in writing</h2>
+    </div>
+    <div class="plaques">
+      <div class="plaque">
+        <div class="date">14 November 2011</div>
+        <h3>Adegoke Akinola&#8209;Adefolalu House</h3>
+        <p>A house of Ilawe Grammar School named in his honour. He serves the school as patron.</p>
+      </div>
+      <div class="plaque">
+        <div class="date">6 May 2025</div>
+        <h3>Ekiti State Ministry of Education</h3>
+        <p>Letter of appreciation for his contribution to the development of schools in Ilawe&#8209;Ekiti.</p>
+      </div>
+      <div class="plaque">
+        <div class="date">20 May 2025</div>
+        <h3>Teaching Service Commission, Ekiti State</h3>
+        <p>Letter of appreciation for his contribution to developmental activities in Ilawe&#8209;Ekiti schools.</p>
+      </div>
+    </div>
+
+    <div class="head-block" style="margin-top:clamp(3rem,6vw,4.6rem)">
+      <div class="bead"></div>
+      <p class="eyebrow">Beyond the School Gates</p>
+    </div>
+    <div class="two">
+      <div class="commit">
+        <div class="roman">2021</div>
+        <h3>Water for the mission</h3>
+        <p class="muted">Assisted St.&nbsp;John Catholic Pro&#8209;Cathedral Church, Ilawe&#8209;Ekiti, in securing a reduced cost for drilling a borehole at the mission &mdash; and paid more than half of that cost himself.</p>
+      </div>
+      <div class="commit">
+        <div class="roman">2020</div>
+        <h3>Food through the lockdown</h3>
+        <p class="muted">Donated foodstuffs to churches and mosques across Ilawe&#8209;Ekiti during the coronavirus lockdown &mdash; given to both faiths, without distinction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PORTRAIT STRIP ============================ -->
+<section style="padding-block:clamp(2rem,4vw,3.4rem)">
+  <div class="shell">
+    <div class="strip">
+      <figure><img src="assets/p_red.jpg" alt="Prince Dr. Akinola seated in a red-and-white striped aso-oke agbada and matching fila."></figure>
+      <figure><img src="assets/p_indigo.jpg" alt="Prince Dr. Akinola in indigo aso-oke with coral beads and an embroidered cap."></figure>
+      <figure><img src="assets/p_blue.jpg" alt="Prince Dr. Akinola seated in a pale blue embroidered agbada and navy fila."></figure>
+      <figure><img src="assets/p_grey.jpg" alt="Prince Dr. Akinola in a grey shirt, seated, in an informal studio portrait."></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OATH ============================ -->
+<section class="band">
+  <div class="shell oath">
+    <div class="bead"></div>
+    <blockquote>Grounded in service &mdash; and in an enduring commitment to the people of Ilawe&#8209;Ekiti.</blockquote>
+    <div class="attrib">Prince Dr. Jerome Adegoke Akinola</div>
+    <div class="bead"></div>
+  </div>
+</section>
+
+<!-- ============================ VISION &amp; MISSION ============================ -->
+<section id="vision">
+  <div class="shell">
+    <div class="head-block">
+      <div class="bead"></div>
+      <p class="eyebrow">My Vision and Mission as Alawe of Ilawe&#8209;Ekiti</p>
+      <h2 class="h2">What I shall do from the Stool</h2>
+    </div>
+
+    <div class="vm">
+      <article>
+        <h3>Vision</h3>
+        <p>To make our town Ilawe&#8209;Ekiti united, peaceful, prosperous, culturally proud, secure and forward&#8209;looking. To build an exemplary community where tradition and modern development work together, and where every indigene and resident has the opportunity to live with dignity, contribute meaningfully, and prosper.</p>
+      </article>
+      <article>
+        <h3>Mission</h3>
+        <p>To provide inclusive, visionary and purposeful traditional leadership; to preserve the heritage and dignity of the Stool of Alawe of Ilawe&#8209;Ekiti; to unite our people; mobilise development partnerships and investments; empower our youth; protect the vulnerable; and position Ilawe&#8209;Ekiti as a model community in Ekiti State and in Nigeria.</p>
+      </article>
+    </div>
+
+    <div class="pillars" style="margin-top:clamp(3rem,6vw,4.8rem)">
+
+      <div class="pillar">
+        <div>
+          <div class="num">1</div>
+          <h3>Promoting Unity, Peace and Social Harmony</h3>
+          <p class="intro">As the father of all indigenes and residents of Ilawe&#8209;Ekiti &mdash; irrespective of religion, political affiliation, social status, age, gender or place of residence &mdash; I shall provide leadership that is fair, inclusive, compassionate and impartial.</p>
+        </div>
+        <ol>
+          <li>Foster peace, mutual respect, understanding and harmony among all quarters, families, associations, institutions and interest groups.</li>
+          <li>Promote reconciliation and healing wherever there are disagreements, divisions or grievances, recognising that the strength of Ilawe lies in the unity of its people.</li>
+          <li>Build stronger bonds between Ilawe at home and Ilawe people in the diaspora, creating meaningful opportunities for our sons and daughters worldwide to contribute to the development of their ancestral home.</li>
+          <li>Promote inclusive leadership and consultation, ensuring that every section of our community feels heard, respected, valued and represented.</li>
+          <li>Protect the collective interest of Ilawe&#8209;Ekiti by encouraging dialogue, fairness, due process and peaceful resolution of disputes.</li>
+          <li>Give necessary attention to outstanding legal and institutional matters inherited from the previous Alawe and Alawe&#8209;in&#8209;Council, working with the appropriate authorities and professional advisers to seek their timely and satisfactory resolution in the best interest of Ilawe&#8209;Ekiti.</li>
+        </ol>
+      </div>
+
+      <div class="pillar">
+        <div>
+          <div class="num">2</div>
+          <h3>Preserving Our Heritage and Cultural Identity</h3>
+          <p class="intro">As custodian of the traditions, history, culture and ancestral heritage of Ilawe&#8209;Ekiti, I shall ensure that our identity remains strong even as our community embraces the future.</p>
+        </div>
+        <ol>
+          <li>Protect, preserve, promote and transmit the rich cultural values and traditions of Ilawe&#8209;Ekiti and the Yoruba race.</li>
+          <li>Safeguard our historical sites, traditional institutions, festivals, landmarks, customs and cultural practices for present and future generations.</li>
+          <li>Uphold the dignity, integrity, sanctity and prestige of the Alawe Stool, ensuring that the institution continues to command respect within Ilawe&#8209;Ekiti, Ekiti State, Yorubaland and beyond.</li>
+          <li>Promote the documentation of Ilawe&rsquo;s history &mdash; our origins, traditions, institutions, heroes and significant historical events.</li>
+          <li>Encourage younger generations to understand and value their heritage, so that modernisation does not cost us our identity and our values.</li>
+        </ol>
+      </div>
+
+      <div class="pillar">
+        <div>
+          <div class="num">3</div>
+          <h3>Championing Community Development</h3>
+          <p class="intro">As Alawe I will not merely be a custodian of tradition; I will also be a catalyst for development &mdash; mobilising our people and building partnerships with government, non&#8209;governmental organisations, the private sector, development agencies, philanthropists and our diaspora.</p>
+        </div>
+        <div>
+          <ol>
+            <li>Advocate for improved healthcare facilities, roads, potable water, electricity, telecommunications and other essential infrastructure.</li>
+            <li>Reposition our traditional institutions and community leadership structures to play a more active and constructive role in development.</li>
+            <li>Build stronger relationships with government agencies at Federal, State and Local Government levels, and maintain constructive engagement with all political administrations.</li>
+            <li>Mobilise the Ilawe diaspora and development&#8209;minded individuals and organisations to support sustainable projects in our community.</li>
+            <li>Encourage community ownership and participation, so that development initiatives are sustainable and answer the genuine needs of our people.</li>
+            <li>Protect our educational institutions.</li>
+          </ol>
+          <div class="callout">
+            <div class="tag">On the Federal College of Education</div>
+            <p>The establishment of the Federal College of Education in Ilawe&#8209;Ekiti is an important opportunity for our community. But development must not come at the expense of an existing institution that serves our children. I shall work constructively with the relevant authorities and stakeholders to ensure the Federal College of Education receives the support it needs to thrive here, and that the <strong>Ekiti State Model College, Ilawe&#8209;Ekiti, is restored and reopened at its appropriate location</strong> &mdash; with the interests of students, parents, teachers, the host community and the wider people of Ilawe protected.</p>
+            <p><strong>Our approach shall not be &ldquo;add and drop&rdquo;. It shall be &ldquo;add and preserve.&rdquo;</strong> We must expand educational opportunity rather than replace one valuable institution with another.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div>
+          <div class="num">4</div>
+          <h3>Driving Economic Growth, Investment and Prosperity</h3>
+          <p class="intro">I envision an Ilawe&#8209;Ekiti where our people do not merely survive, but build sustainable livelihoods, generate employment and create wealth.</p>
+        </div>
+        <ol>
+          <li>Modern agriculture, agro&#8209;processing and agribusiness, leveraging the agricultural potential of our land.</li>
+          <li>Small and medium&#8209;scale enterprise, through access to finance, training, markets, technology and mentorship.</li>
+          <li>Tourism and cultural enterprise, taking advantage of Ilawe&rsquo;s history, culture, traditions and natural environment &mdash; Ikereje Hill, Oke&#8209;&Ograve;r&iacute;n and Ajag&eacute;m&ograve;.</li>
+          <li>Strategic investment partnerships capable of creating employment, generating wealth and improving the standard of living of our people.</li>
+          <li>An enabling environment for entrepreneurship and innovation, particularly for young people and women.</li>
+          <li>Diaspora investment &mdash; encouraging Ilawe sons and daughters around the world to see their hometown not only as a place of origin, but as a place of opportunity.</li>
+        </ol>
+      </div>
+
+      <div class="pillar">
+        <div>
+          <div class="num">5</div>
+          <h3>Advancing Education and Empowering Our Youth</h3>
+          <p class="intro">The youth are not merely the leaders of tomorrow; they should be partners in building Ilawe today.</p>
+        </div>
+        <ol>
+          <li>Initiate and support scholarship schemes, mentorship programmes, educational grants and other initiatives that promote academic excellence.</li>
+          <li>Promote vocational, technical, digital, entrepreneurial and professional skills development.</li>
+          <li>Encourage our youth to pursue excellence, innovation, creativity, responsible citizenship and leadership.</li>
+          <li>Create opportunities for youth participation in community leadership and development programmes.</li>
+          <li>Support initiatives designed to reduce unemployment, discourage social vices and promote economic self&#8209;reliance.</li>
+          <li>Establish stronger links between our youth and successful professionals, entrepreneurs, institutions and members of the Ilawe diaspora.</li>
+        </ol>
+      </div>
+
+      <div class="pillar">
+        <div>
+          <div class="num">6</div>
+          <h3>Environmental Sustainability and Orderly Town Development</h3>
+          <p class="intro">A prosperous Ilawe must also be clean, orderly, attractive and environmentally sustainable.</p>
+        </div>
+        <ol>
+          <li>Promote environmental cleanliness and effective waste management.</li>
+          <li>Encourage proper physical planning and orderly urban development.</li>
+          <li>Protect our forests, water resources and other ecological assets.</li>
+          <li>Mobilise community initiatives that encourage residents to take collective responsibility for the appearance and cleanliness of our town.</li>
+        </ol>
+      </div>
+
+      <div class="pillar">
+        <div>
+          <div class="num">7</div>
+          <h3>Welfare, Inclusion and Protection of the Vulnerable</h3>
+          <p class="intro">Traditional leadership carries a profound responsibility to protect the dignity and welfare of the vulnerable.</p>
+        </div>
+        <div>
+          <ol>
+            <li>Advocate for improved healthcare and social welfare services.</li>
+            <li>Initiate programmes supporting women, children, widows, the elderly, persons with disabilities and other vulnerable members of our community.</li>
+            <li>Protect the interests of host communities.</li>
+          </ol>
+          <div class="callout">
+            <div class="tag">On the host community</div>
+            <p>Where our people have made sacrifices for the advancement of Ilawe&#8209;Ekiti, those sacrifices must be recognised and treated with fairness. In particular, <strong>the host community that voluntarily made its land available for the Federal College of Education must not be worse off for that generosity.</strong> I shall engage the relevant authorities and stakeholders to ensure the legitimate interests and rights of the landowners are recognised, and that appropriate compensation and other benefits due to them are pursued in accordance with applicable law and agreements.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div>
+          <div class="num">8</div>
+          <h3>Security, Peace and Public Safety</h3>
+          <p class="intro">No meaningful development can take place in an atmosphere of insecurity. I shall work closely with security agencies, community leaders, youth organisations, traditional institutions and residents.</p>
+        </div>
+        <ol>
+          <li>Strengthen peace, security and public safety throughout Ilawe&#8209;Ekiti.</li>
+          <li>Promote responsible community vigilance and crime prevention.</li>
+          <li>Encourage early intervention and peaceful resolution of conflicts and disputes.</li>
+          <li>Promote a culture of peace, tolerance, responsibility and respect for law and order &mdash; so that Ilawe&#8209;Ekiti remains a safe, peaceful, welcoming and investment&#8209;friendly community.</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMMITMENT ============================ -->
+<section class="band" id="commitment">
+  <div class="shell closing">
+    <div class="bead" style="max-width:170px"></div>
+    <div class="rank">My Commitment to Ilawe&#8209;Ekiti</div>
+    <h2>Bridges, not walls</h2>
+    <p class="muted measure" style="text-align:center;margin-inline:auto">My aspiration is to serve as a unifying and development&#8209;oriented Alawe &mdash; one who respects our ancestors, protects our heritage, understands the realities of the present, and prepares our community confidently for the future.</p>
+    <div class="pledge">
+      <span>To unite, not divide</span>
+      <span>Opportunity, not dependency</span>
+      <span>Development, not stagnation</span>
+    </div>
+    <p class="muted measure" style="text-align:center;margin-inline:auto">The strength of Ilawe&#8209;Ekiti lies not only in the Alawe Stool, but in the collective wisdom, talent, resources, sacrifice and goodwill of our people at home and across the world. My leadership shall be founded on consultation, inclusion, fairness, integrity, collaboration and service.</p>
+    <p class="vow">We shall all build Ilawe together.</p>
+    <div class="bead" style="max-width:170px"></div>
+  </div>
+</section>
+
+<!-- ============================ PROFESSIONAL ============================ -->
+<section>
+  <div class="shell">
+    <div class="head-block">
+      <div class="bead"></div>
+      <p class="eyebrow">A Life in Finance</p>
+      <h2 class="h2">Professional profile</h2>
+    </div>
+    <div class="prof">
+      <div class="r"><b>Chairman</b><span>Universal McCann Limited</span></div>
+      <div class="r"><b>MD / CEO</b><span>Richlook Nigeria Ltd.</span></div>
+      <div class="r"><b>Managing Partner</b><span>Adegoke Akinola &amp; Co.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="shell stack">
+    <div class="bead" style="max-width:150px"></div>
+    <div class="fin">Prince Dr. Jerome Adegoke Akinola &middot; FCA &middot; FCTI &middot; FCILRMN &middot; MJF &middot; NLCF</div>
+    <div>In continued service to the people of Ilawe&#8209;Ekiti.</div>
+  </div>
+</footer>
+</body>
+</html>
