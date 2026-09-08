@@ -470,6 +470,26 @@ html{scroll-behavior:smooth}
      content below fills that space instead. */
   .plate,.frame,.strip figure,.plaque,.cap,.callout,
   .deeds li,.pillar ol li,.ledger .row{break-inside:avoid}
+
+  /* Screen spacing is sized for scrolling, where extra air costs nothing.
+     On paper it's what makes some pages pack tight and others end up
+     40-60% blank: whatever block doesn't fit the space left on a page
+     jumps to a fresh one wholesale. Shrinking every gap and margin here
+     shrinks each block's footprint, so more of them land close to a page
+     boundary instead of just past it — pages come out consistently full
+     rather than a mix of dense and half-empty. */
+  .head-block{margin-bottom:1.3rem;gap:.7rem}
+  .evidence{gap:1.4rem}
+  .ev{gap:1rem}
+  .two,.vm{gap:1.4rem}
+  .pillars{gap:1.5rem}
+  .pillar{gap:.9rem;padding-top:1rem}
+  .pillar .intro{margin-top:.5rem}
+  .deeds{gap:.8rem;margin-top:1rem}
+  .pillar ol{gap:.5rem}
+  .plaques{gap:.8rem}
+  .strip{gap:.6rem}
+  .callout{margin-top:.8rem;padding:.9rem 1.1rem;gap:.4rem}
 }
 </style>
 <style>
